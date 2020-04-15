@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Especialidade";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header></header>
+<div class="container ">
+    <h1 class="">Medicos da Clínica</h1>
+</div>
+<div class="row justify-content-center">
+
+    <input type="button" id="btnCadastrarNovoEspecialidade" class="btn btn-outline-success justify-content-center" name="CadastrarEspecialidade" value="Cadastrar Especialidade" />
+</div>
+<br />
+<div>
+    <table id="de_tabela_Especialidade" class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col"><h3>Id</h3></th>
+                <th scope="col"><h3>Nome</h3></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr></tr>
+        </tbody>
+    </table>
+    @ViewBag.Message
+    <div id="janelaMostraUmEspecialidade" class="modal fade">
+        <div class="modal-dialog" id="modalDialogMostrarEspecialidade">
+        </div>
+    </div>
+    <div id="janelaAlteraEspecialidade" class="modal fade">
+        <div class="modal-dialog" id="modalDialogAlterarEspecialidade">
+        </div>
+    </div>
+    <div id="janelaCadastraEspecialidade" class="modal fade">
+        <div class="modal-dialog" id="modalDialogCadastrarEspecialidade">
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/AdminEspecialidade.js"></script>

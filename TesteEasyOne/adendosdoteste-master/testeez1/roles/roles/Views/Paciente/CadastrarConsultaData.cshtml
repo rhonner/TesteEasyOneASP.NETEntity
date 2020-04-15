@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "CadastrarConsultaData";
+    Layout = "~/Views/Shared/_LayoutPacientes.cshtml";
+}
+
+@model roles.Models.ConsultaModel
+
+<div class="container">
+    <div class="cabecalho">
+        <div class="row justify-content-center">
+            <h1 class="">Selecione uma data</h1>
+        </div>
+
+        <div class="row justify-content-center">
+            @Html.LabelFor(model => model.Data) <br />
+        </div>
+        <div class="row justify-content-center">
+                @Html.TextBoxFor(model => model.Data, new { @id = "dataConsulta", @type = "datetime-local",@class = "form-control datepicker col-md-4"}) <br /><br />
+        </div>
+        <br />  
+        <div class="row justify-content-center">
+            <input type="button" value="Buscar Médicos" class="btn btn-success justify-content-center" id="btnBuscarMedicosData" />
+
+        </div>
+
+    </div>
+
+</div>
+<div id="janelaCadastraConsultaData" class="modal fade">
+    <div class="modal-dialog" id="modalDialogCadastrarConsultaData">
+    </div>
+</div>
+<script src="~/Scripts/CadastrarConsultaData.js"></script>

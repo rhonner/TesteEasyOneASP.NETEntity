@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<header></header>
+<div class="container ">
+    <h1 class="">Consultas</h1>
+</div>
+<div class="row justify-content-center">
+    <input type="button" class="btn btn-outline-info" name="btnGerarAgendaDiaria" value="Gerar Agenda de Consultas Diária" id="btnGerarAgendaDiaria" />
+</div>
+<div>
+    <br />
+    <table id="de_tabela" class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col"><h3>Id</h3></th>
+                <th scope="col"><h3>Medico</h3></th>
+                <th scope="col"><h3>Paciente</h3></th>
+                <th scope="col"><h3>Descricao</h3></th>
+                <th scope="col"><h3>Data</h3></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr></tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="col"><h3>Id</h3></th>
+                <th scope="col"><h3>Medico</h3></th>
+                <th scope="col"><h3>Paciente</h3></th>
+                <th scope="col"><h3>Descricao</h3></th>
+                <th scope="col"><h3>Data</h3></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </tfoot>
+    </table>
+    @ViewBag.Message
+</div>
+<div id="janelaMostraUmaConsulta" class="modal fade">
+    <div class="modal-dialog" id="modalDialogMostrarConsulta">
+    </div>
+</div>
+<script src="~/Scripts/AdminIndex.js"></script>
+<script src="~/Scripts/moment.js"></script>

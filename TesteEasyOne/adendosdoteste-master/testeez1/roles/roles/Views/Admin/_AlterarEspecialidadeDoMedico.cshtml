@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "_AlteraEspecialidadeDoMedico";
+}
+
+@model roles.Models.MedicoModel
+
+
+<div class="modal-content">
+    <div class="modal-header justify-content-center">
+        @*<button type="button" class="close" data-dismiss="modal">X</button>*@
+        <div><h3>Paciente Selecionado</h3></div>
+
+    </div>
+    <div class="modal-body olar">
+
+        @using (Html.BeginForm("AlterarEspecialidadeMedico", "Admin", FormMethod.Post)) {
+            @*model.Nome (Nome = id da textbox)*@
+            @Html.HiddenFor(model => model.Id, new {@Id = "idMedico"})
+            @Html.HiddenFor(model => model.Nome, new {@Id = "nomeMedico"})
+            @Html.HiddenFor(model => model.Crm, new {@Id = "CrmMedico"})
+            <label class="align-content-center">Especialidade atual do médico</label> <br />
+            @Html.TextBoxFor(model => model.Especialidade.Nome, new { @class = "form-control", @readonly = "readonly"}) <br /><br />
+            <br /><br />
+            @Html.DropDownListFor(model => model.IdEspecialidade, ViewBag.Especialidades as SelectList, new { @Id = "especialidades", @class = "form-control" })
+
+            <br />
+            <div class="row justify-content-center">
+                <input type="submit" value="Alterar" class="btn btn-success justify-content-center" id="btnAlterarEspecialidadeMedico" />
+            </div>
+
+        }
+
+
+    </div>
+
+
+    <div class="modal-footer">
+
+    </div>
+
+</div>

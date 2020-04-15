@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Pacientes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/AdminPacientes.js"></script>
+<header></header>
+<div class="container">
+    <div class="row justify-content">
+        <h1 class="justify-content-center">Pacientes</h1>
+    </div>
+    <div class="row justify-content-center">
+
+        <input type="button" id="btnCadastrarNovoPaciente" class="btn btn-outline-success justify-content-center" name="CadastrarPaciente" value="Cadastrar Paciente" />
+    </div>
+</div>
+<br />
+
+<div>
+    <table id="de_tabela_AdminPacientes" class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col"><h3>Id</h3></th>
+                <th scope="col"><h3>Nome</h3></th>
+                <th scope="col"><h3>Cpf</h3></th>
+                <th scope="col"><h3>Email</h3></th>
+                <th scope="col"><h3>Tipo Sanguíneo</h3></th>
+                <th scope="col"><h3>Sexo</h3></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>      
+            <tr></tr>
+        </tbody>
+    </table>
+    @ViewBag.Message
+</div>
+<div id="janelaMostraUmPaciente" class="modal fade">
+    <div class="modal-dialog" id="modalDialogMostrar">
+    </div>
+</div>
+<div id="janelaCadastraPaciente" class="modal fade">
+    <div class="modal-dialog" id="modalDialogCadastrar">
+    </div>
+</div>

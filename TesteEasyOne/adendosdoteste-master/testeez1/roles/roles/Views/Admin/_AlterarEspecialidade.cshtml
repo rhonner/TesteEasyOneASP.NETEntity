@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "_AlteraEspecialidade";
+}
+
+@model roles.Models.EspecialidadeModel
+
+
+<div class="modal-content">
+    <div class="modal-header justify-content-center">
+        @*<button type="button" class="close" data-dismiss="modal">X</button>*@
+        <div><h3>Alterar Especialidade Selecionada</h3></div>
+
+    </div>
+    <div class="modal-body olar">
+
+        @using (Html.BeginForm("AlterarEspecialidade", "Admin", FormMethod.Post)) {
+            @*model.Nome (Nome = id da textbox)*@
+            @Html.HiddenFor(model => model.Id, new { @Id = "idEspecialidade" })<br /><br />
+            @Html.LabelFor(model => model.Nome) <br />
+            @Html.TextBoxFor(model => model.Nome, new { @Id = "nomeEspecialidade", @class="form-control" })<br /><br />
+            @Html.LabelFor(model => model.Descricao)<br />
+            @Html.TextAreaFor(model => model.Descricao, new { @Id = "descricaoEspecialidade", @class = "form-control", }) <br /><br />
+            <br /><br />
+            <br />
+            <div class="row justify-content-center">
+                <input type="submit" value="Alterar" class="btn btn-success justify-content-center" id="btnAlterarEspecialidadeMedico" />
+            </div>
+
+        }
+
+
+    </div>
+
+
+    <div class="modal-footer">
+
+    </div>
+
+</div>
+

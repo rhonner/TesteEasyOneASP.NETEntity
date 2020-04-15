@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Medicos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header></header>
+<div class="container ">
+    <h1 class="">Medicos da Clínica</h1>
+</div>
+<div class="row justify-content-center">
+
+    <input type="button" id="btnCadastrarNovoMedico" class="btn btn-outline-success justify-content-center" name="CadastrarMedico" value="Cadastrar Médico" />
+</div>
+<br />
+<div>
+    <table id="de_tabela_Medicos" class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col"><h3>Id</h3></th>
+                <th scope="col"><h3>Nome</h3></th>
+                <th scope="col"><h3>CRM</h3></th>
+                <th scope="col"><h3>Especialidade</h3></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr></tr>
+        </tbody>
+    </table>
+    @ViewBag.Message
+    <div id="janelaMostraUmMedico" class="modal fade">
+        <div class="modal-dialog" id="modalDialogMostrarMedico">
+        </div>
+    </div>
+    <div id="janelaAlteraMedico" class="modal fade">
+        <div class="modal-dialog" id="modalDialogAlterarMedico">
+        </div>
+    </div>
+    <div id="janelaCadastraMedico" class="modal fade">
+        <div class="modal-dialog" id="modalDialogCadastrarMedico">
+        </div>
+    </div>
+</div>
+
+
+
+<script src="~/Scripts/AdminMedicos.js"></script>
+<script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>

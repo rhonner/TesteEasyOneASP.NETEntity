@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "_CadastrarConsultaData";
+    Layout = null;
+
+}
+
+@model roles.Models.ConsultaModel
+
+<script src="~/Scripts/jquery.mask.min.js"></script>
+
+<div class="modal-content">
+    <div class="modal-header">
+        @*<button type="button" class="close" data-dismiss="modal">X</button>*@
+
+        <h3>Agendamento de Consulta por Data</h3>
+    </div>
+    <div class="modal-body olar">
+
+
+
+        @*@*model.Nome (Nome = id da textbox)*@
+        @using (Html.BeginForm("CadastrarConsulta", "Paciente", FormMethod.Post)) {
+            @*@Html.HiddenFor(model => model.Id)*@
+            <div class="row justify-content-center">
+                @Html.LabelFor(model => model.Data) <br />
+            </div>
+            <div class="row justify-content-center">
+                @Html.TextBoxFor(model => model.Data, new { @id = "dataConsulta", @type = "datetime-local", @class = "form-control datepicker" }) <br /><br />
+            </div>
+            <br />
+            @Html.LabelFor(model => model.Medico) <br />
+            @Html.DropDownListFor(model => model.IdMedico, Enumerable.Empty<SelectListItem>(), new { @Id = "medicosDropData", @class = "form-control col-md-5" })<br /><br />
+            @*@Html.DropDownListFor(model => model.IdMedico, ViewBag.Medicos as SelectList, new { @Id = "medicos", @class = "form-control" })<br /><br />*@
+
+            @Html.LabelFor(model => model.Descricao) <br />
+            @Html.TextAreaFor(model => model.Descricao, new { @class = "form-control" }) <br /><br />
+            @*@Html.TextBoxFor(model => model.Data, new { @id = "dataConsulta2", @type = "datetime-local", @class = "form-control datepicker", @readonly = "readonly" }) <br /><br />*@
+            <br /><br />
+            <input type="submit" value="Cadastrar Consulta" class="btn btn-success justify-content-center" id="btnCadastrarConsulta" />
+
+            @*<div class="row justify-content-center">
+                <input type="submit" value="Cadastrar Paciente" class="btn btn-success justify-content-center" name="btnCadastrarPaciente" />
+
+            </div>*@
+        }
+
+    </div>
+
+
+    <div class="modal-footer">
+
+    </div>
+
+</div>

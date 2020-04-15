@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "_CadastroPaciente";
+}
+
+@model roles.Models.PacienteModel
+
+
+<div class="modal-content">
+    <div class="modal-header">
+        @*<button type="button" class="close" data-dismiss="modal">X</button>*@
+
+        <h3>Cadastro de pacientes</h3>
+    </div>
+    <div class="modal-body olar">
+
+
+
+        @*@*model.Nome (Nome = id da textbox)*@
+        @using (Html.BeginForm("CadastrarPaciente", "Admin", FormMethod.Post)) {
+            @*@Html.HiddenFor(model => model.Id)*@
+            @Html.LabelFor(model => model.Nome) <br />
+            @Html.TextBoxFor(model => model.Nome, new { @class = "form-control", @maxlength = "150" }) <br /><br />
+            @Html.LabelFor(model => model.Cpf) <br />
+            @Html.TextBoxFor(model => model.Cpf, new { @class = "form-control",@pattern = "[0-9]+$", @maxlength = "11" }) <br /><br />
+            @Html.LabelFor(model => model.Email) <br />
+            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @maxlength = "100" }) <br /><br />
+            @Html.LabelFor(model => model.Sangue) <br />
+            @*@Html.DropDownListFor(model => model.Sangue,ViewBag.Sangues as SelectList,new { @Id = "sangues", @class = "form-control"})*@
+            @Html.DropDownListFor(model => model.TipoSanguineo, ViewBag.Sangues as SelectList, new { @Id = "sangues", @class = "form-control" })
+            @Html.LabelFor(model => model.Sexo) <br />
+            @Html.TextBoxFor(model => model.Sexo, new { @class = "form-control", @maxlength = "1" })
+            <br /><br />
+            <input type="submit" value="Cadastrar Paciente" class="btn btn-success justify-content-center" id="btnCadastrarPaciente" />
+
+            @*<div class="row justify-content-center">
+                <input type="submit" value="Cadastrar Paciente" class="btn btn-success justify-content-center" name="btnCadastrarPaciente" />
+
+            </div>*@
+        }
+
+    </div>
+    <div class="modal-footer">
+           
+    </div>
+
+</div>

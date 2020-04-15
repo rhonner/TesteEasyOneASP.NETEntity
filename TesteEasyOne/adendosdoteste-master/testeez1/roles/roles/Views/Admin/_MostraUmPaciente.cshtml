@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "_MostraUmPaciente";
+}
+
+@model roles.Models.PacienteModel
+
+
+<div class="modal-content">
+    <div class="modal-header justify-content-center">
+        @*<button type="button" class="close" data-dismiss="modal">X</button>*@
+        <div><h3>Paciente Selecionado</h3></div>
+        
+    </div>
+    <div class="modal-body olar">
+
+
+
+        @*@*model.Nome (Nome = id da textbox)*@
+            @Html.HiddenFor(model => model.Id)
+            @Html.LabelFor(model => model.Nome) <br />
+            @Html.TextBoxFor(model => model.Nome, new { @class = "form-control", @readonly = "readonly" }) <br /><br />
+            @Html.LabelFor(model => model.Cpf) <br />
+            @Html.TextBoxFor(model => model.Cpf, new { @class = "form-control", @readonly = "readonly" }) <br /><br />
+            @Html.LabelFor(model => model.Email) <br />
+            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @readonly = "readonly" }) <br /><br />
+            @Html.LabelFor(model => model.Sangue) <br />
+            @Html.TextBoxFor(model => model.Sangue.Tipo, new { @class = "form-control", @readonly = "readonly" })
+            @Html.LabelFor(model => model.Sexo) <br />
+            @Html.TextBoxFor(model => model.Sexo, new { @class = "form-control", @readonly = "readonly" })
+            <br /><br />
+            <br />
+
+    </div>
+
+
+    <div class="modal-footer">
+
+    </div>
+
+</div>

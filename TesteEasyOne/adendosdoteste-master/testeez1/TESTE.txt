@@ -1,0 +1,30 @@
+Clínica Médica
+Uma clínica médica, onde administradores e usuários poderão acessar suas respectivas áreas;
+Com possibilidade de gerenciar médicos, pacientes, realizar marcação de consultas e gerar relatórios sobre atendimentos;
+
+Requisitos:
+Administradores
+- Cadastro de especialidades;s
+- Cadastro de médicos;s
+- Cadastro de pacientes;s
+- *Visualizar agenda de consultas;s
+- Gerar reltórios sobre atendimentos;
+
+https://stackoverflow.com/questions/11077823/how-to-filter-drop-down-list-based-on-previous-selection/11102704#11102704
+
+Usuários
+- Busca de médico por especialidade;2 medicos
+- Marcação de consultas;1 partial da home s
+- Escolha de hórario e médico disponíveis;3     medicos
+- Cancelar consultas;4
+
+OBS
+- *Administradores podem gerar um PDF contendo a agenda de cada médico no dia;
+- Dados de login do paciente cadastrado podem ser Email cadastrado como usuário e CPF como senha;
+- Cancelamento de consulta poderá ser realizado até 24h antes da data marcada;
+- Interface deve ser agradável;
+- Utilizar Entity Framework;
+- Modelar o banco de forma adequada; 
+- Utilizar conceito de Bundles para CSS e JS;
+- Evitar usar CSS e JS no HTML;
+https://youtu.be/SqFmAMRnC2E?t=1078

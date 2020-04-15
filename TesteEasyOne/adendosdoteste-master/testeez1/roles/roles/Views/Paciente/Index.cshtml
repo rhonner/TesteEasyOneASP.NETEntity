@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPacientes.cshtml";
+}
+
+<header></header>
+<div class="row justify-content-center">
+    <h1>Bem Vindo @ViewBag.NomePaciente</h1>
+</div>
+<br />
+<div class="row">
+    <div class="col">
+        <label>agendar consulta por medico</label><br />
+        <input type="button" name="Agendar Consulta" id="btnAgendarConsulta" value="Agendar Consulta" class="btn btn-outline-success" />
+    </div>
+    <div class="col">
+        <label>agendar consulta por especialidade</label><br />
+        <input type="button" name="Agendar Consulta" id="btnAgendarConsultaEspecialidade" value="Agendar Consulta" class="btn btn-outline-success justify-content-center" />
+    </div>
+    <div class="col">
+        <label>agendar consulta data</label><br />
+        <input type="button" name="Agendar Consulta" id="btnAgendarConsultaData" value="Agendar Consulta" class="btn btn-outline-success" />
+    </div>
+    <input type="hidden" id="IdPaciente" value="@ViewBag.IdPaciente" />
+</div>
+<br /><br /><br />
+<div class="row justify-content-center">
+    <h3>Consultas Agendadas</h3>
+</div>
+<br />
+<div class="">
+    <table id="de_tabela" class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col"><h3>Medico</h3></th>
+                <th scope="col"><h3>Especialidade</h3></th>
+                <th scope="col"><h3>Data</h3></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr></tr>
+        </tbody>
+    </table>
+    @ViewBag.Message
+
+</div>
+<div id="janelaMostraConsulta" class="modal fade">
+    <div class="modal-dialog" id="modalDialogMostrarConsulta">
+    </div>
+</div>
+<div id="janelaCadastraConsulta" class="modal fade">
+    <div class="modal-dialog" id="modalDialogCadastrarConsulta">
+    </div>
+</div>
+<div id="janelaCadastraConsultaEspecialidade" class="modal fade">
+    <div class="modal-dialog" id="modalDialogCadastrarConsultaEspecialidade">
+    </div>
+</div>
+<div id="janelaCadastraConsultaData" class="modal fade">
+    <div class="modal-dialog" id="modalDialogCadastrarConsultaData">
+    </div>
+</div>
+<script src="~/Scripts/moment.js"></script> 
