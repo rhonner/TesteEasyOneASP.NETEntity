@@ -1,30 +1,29 @@
-ClÌnica MÈdica
-Uma clÌnica mÈdica, onde administradores e usu·rios poder„o acessar suas respectivas ·reas;
-Com possibilidade de gerenciar mÈdicos, pacientes, realizar marcaÁ„o de consultas e gerar relatÛrios sobre atendimentos;
+Cl√≠nica M√©dica
+Uma cl√≠nica m√©dica, onde administradores e usu√°rios poder√£o acessar suas respectivas √°reas;
+Com possibilidade de gerenciar m√©dicos, pacientes, realizar marca√ß√£o de consultas e gerar relat√≥rios sobre atendimentos;
 
 Requisitos:
 Administradores
 - Cadastro de especialidades;s
-- Cadastro de mÈdicos;s
+- Cadastro de m√©dicos;s
 - Cadastro de pacientes;s
 - *Visualizar agenda de consultas;s
-- Gerar reltÛrios sobre atendimentos;
+- Gerar relt√≥rios sobre atendimentos;
 
 https://stackoverflow.com/questions/11077823/how-to-filter-drop-down-list-based-on-previous-selection/11102704#11102704
 
-Usu·rios
-- Busca de mÈdico por especialidade;2 medicos
-- MarcaÁ„o de consultas;1 partial da home s
-- Escolha de hÛrario e mÈdico disponÌveis;3     medicos
+Usu√°rios
+- Busca de m√©dico por especialidade;2 medicos
+- Marca√ß√£o de consultas;1 partial da home s
+- Escolha de h√≥rario e m√©dico dispon√≠veis;3     medicos
 - Cancelar consultas;4
 
 OBS
-- *Administradores podem gerar um PDF contendo a agenda de cada mÈdico no dia;
-- Dados de login do paciente cadastrado podem ser Email cadastrado como usu·rio e CPF como senha;
-- Cancelamento de consulta poder· ser realizado atÈ 24h antes da data marcada;
-- Interface deve ser agrad·vel;
+- *Administradores podem gerar um PDF contendo a agenda de cada m√©dico no dia;
+- Dados de login do paciente cadastrado podem ser Email cadastrado como usu√°rio e CPF como senha;
+- Cancelamento de consulta poder√° ser realizado at√© 24h antes da data marcada;
+- Interface deve ser agrad√°vel;
 - Utilizar Entity Framework;
 - Modelar o banco de forma adequada; 
 - Utilizar conceito de Bundles para CSS e JS;
 - Evitar usar CSS e JS no HTML;
-https://youtu.be/SqFmAMRnC2E?t=1078
